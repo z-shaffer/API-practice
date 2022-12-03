@@ -1,7 +1,7 @@
 # API-practice
 To create the jar file containing the application, run: mvn clean package. This will compile all your code changes and create a Java jar file with your compiled code.
 
-To create the Docker image, run: docker build -t restful-app . This will create an image named restful-app, using the Dockerfile found in the current directory (which the . represents). If you use a different image name that's fine, but you need to then use it consistently in all the commands given here. I will use restful-app in the rest of the steps. If you have a Mac with Apple silicon, see the note above.
+To create the Docker image, run: "docker build -t restful-app ." This will create an image named restful-app, using the Dockerfile found in the current directory (which the . represents).
 
 To push this image up to Google Cloud Platform, you first need to tag it with an appropriate name. The command for this is docker tag restful-app gcr.io/project-id/restful-app, where project-id is the GCP project id for your project. You can run gcloud config list project to see what this project id is. Next, run docker push gcr.io/project-id/restful-app to actually send the tagged image up to the Google Cloud Platform Container Registry.
 
